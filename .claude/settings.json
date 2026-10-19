@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip --version)",
+      "Bash(npm *)",
+      "Bash(python -m venv .venv)",
+      "Bash(./.venv/Scripts/python -m pip install *)",
+      "Bash(./.venv/Scripts/python -c *)",
+      "Bash(./.venv/Scripts/python -m pytest *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(./.venv/Scripts/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000)"
+    ]
+  }
+}

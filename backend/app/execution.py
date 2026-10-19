@@ -58,6 +58,7 @@ def execute_case(test_case: TestCase, db: Session, set_run_id: int | None = None
             headers=test_case.headers or None,
             content=content,
             timeout=settings.EXECUTE_TIMEOUT,
+            trust_env=False
         )
         result.response_status = response.status_code
         result.response_body = response.text

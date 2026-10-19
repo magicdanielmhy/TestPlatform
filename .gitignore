@@ -12,3 +12,8 @@ dist/
 # Misc
 .DS_Store
 .deepeval/
+
+# Env
+.env
+.env.*
+!.env.example

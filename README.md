@@ -33,12 +33,14 @@ python -m venv .venv
 # Windows PowerShell: .venv\Scripts\activate
 # Git Bash: source .venv/Scripts/activate
 pip install -r requirements.txt
+# 必填环境变量：SECRET_KEY、ADMIN_USERNAME、ADMIN_PASSWORD。
+# 可复制 .env.example 为 .env 并用 --env-file .env 加载，或在 shell 中 export。
 uvicorn app.main:app --reload --port 8000
 ```
 
 接口文档：http://localhost:8000/docs
 
-默认管理员账号：`admin / admin123`（可用环境变量 `ADMIN_USERNAME` / `ADMIN_PASSWORD` 覆盖）。
+管理员账号由环境变量 `ADMIN_USERNAME` / `ADMIN_PASSWORD` 提供（必填，无默认值），JWT 密钥由 `SECRET_KEY` 提供（必填）。
 
 ## 启动前端
 
